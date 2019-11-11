@@ -38,4 +38,6 @@ public class Publisher {
     public void setId(Long id) {
         this.id = id;
     }
+
+    //something
 }
