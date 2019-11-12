@@ -86,7 +86,7 @@
 				<configuration>
 					<images>
 						<image>
-							<name>registry.smart-x.net/ateam/test_alice</name>
+							<name>git.smart-x.net/aliceb/test</name>
 							<build>
 								<dockerFile>${project.build.directory}/Docker/Dockerfile</dockerFile>
 								<tags>
