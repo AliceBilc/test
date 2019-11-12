@@ -55,11 +55,29 @@
 	</dependencies>
 
 	<build>
+
+		<resources>
+			<resource>
+				<directory>${basedir}/src/main/resources</directory>
+			</resource>
+			<resource>
+				<directory>${basedir}/Docker</directory>
+				<filtering>true</filtering>
+				<targetPath>${project.build.directory}/Docker</targetPath>
+			</resource>
+		</resources>
+
+
 		<plugins>
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<outputDirectory>${project.build.directory}/Docker</outputDirectory>
+				</configuration>
 			</plugin>
+
 
 			<plugin>
 				<groupId>io.fabric8</groupId>
