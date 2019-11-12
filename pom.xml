@@ -70,7 +70,7 @@
 						<image>
 							<name>registry.smart-x.net/ateam/poponet</name>
 							<build>
-								<dockerFile>${project.build.directory}/Dockerfile</dockerFile>
+								<dockerFile>${project.build.directory}/Docker/Dockerfile</dockerFile>
 								<tags>
 									<tag>${project.version}</tag>
 									<tag>latest</tag>
