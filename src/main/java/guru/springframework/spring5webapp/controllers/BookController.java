@@ -5,8 +5,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Controller
 public class BookController {
+
 
     private BookRepository bookRepository;
 
@@ -17,7 +21,12 @@ public class BookController {
     @RequestMapping("/books")
     public String getBooks(Model model) {
 
-        model.addAllAttributes(("books", bookRepository.findAll());
+        Map<String, Object> myMap = new HashMap<>();
+        myMap.put("books", bookRepository.findAll());
+
+        model.addAllAttributes(myMap);
+
+        model.addAttribute("myBooks", bookRepository.findAll());
         return "books";
     }
 
